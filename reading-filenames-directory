@@ -1,0 +1,14 @@
+# Reading all filenames from a directory
+import os
+
+d = {'Tracker' : range(0,1500)}
+df3 = pd.DataFrame(d)
+df3['Filename']=''
+    
+i=0
+with os.scandir('C:/Users/JitendraGaur/Documents') as entries:
+    
+    for entry in entries:
+        df3['Filename'][i] = entry.name
+        print(i)
+        i=i+1
