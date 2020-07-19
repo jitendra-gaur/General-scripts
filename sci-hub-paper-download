@@ -1,0 +1,10 @@
+from scidownl.scihub import *
+
+import pandas as pd
+df4 = pd.read_csv("C:/Users/JitendraGaur/Documents/Marketing Letters DOI.csv", sep=",")
+
+#%%
+DOIs = df4['DOI']
+out = 'paper'
+for doi in DOIs:
+  SciHub(doi, 'C:/Users/JitendraGaur/Downloads/').download(choose_scihub_url_index=3)
